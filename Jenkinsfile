@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'Set timeout in 1 minute'
-                sh 'sleep 1m'
+                sh 'sleep 60'
                 sh './jenkins/scripts/kill.sh'
             }
         }
